@@ -1,0 +1,151 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc} % pdfLaTeX encoding
+\usepackage[T1]{fontenc}    % scalable fonts
+\usepackage{lmodern}        % Latin Modern
+\usepackage[margin=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage[protrusion=true,expansion=false]{microtype}
+
+% Colors
+\definecolor{darkblue}{rgb}{0.376,0.49,0.54}
+
+% Links: italic anchor text for all \href (links not colorized for ATS)
+\hypersetup{
+	colorlinks=false,
+	linkcolor=darkblue,
+	urlcolor=darkblue,
+	citecolor=darkblue,
+	filecolor=darkblue
+}
+\let\OldHref\href
+\renewcommand{\href}[2]{\OldHref{#1}{\textit{#2}}}
+
+% Section titles: dark blue, no rule, increased spacing
+%                 \titlespacing*{\section}{left}{before-sep}{after-sep}
+\titleformat{\section}{\large\bfseries\color{darkblue}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{10pt plus 2pt minus 1pt}{6pt plus 2pt minus 1pt}
+
+% (Optional) If you ever add \subsection, keep spacing consistent:
+% \titleformat{\subsection}{\normalsize\bfseries\color{darkblue}}{}{0pt}{}
+% \titlespacing*{\subsection}{0pt}{8pt plus 2pt minus 1pt}{4pt plus 1pt minus 1pt}
+
+% Compact paragraphs and lists
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{nosep, topsep=5pt, partopsep=0pt, parsep=0pt, leftmargin=*, labelsep=0.45em}
+\linespread{1}
+\setlength{\emergencystretch}{2em}
+
+% Icon separator for contact line
+\newcommand{\iconsep}{\ {\color{darkblue}\faCircle}\ }
+
+\pagestyle{empty}
+
+\begin{document}
+	
+	%====================
+	% Contact Information
+	%====================
+	\begin{center}
+		{\Large \textbf{Francesco Sannicola} — Machine Learning Engineer \,|\, Data Scientist}\\
+		Email: \href{mailto:francescosannicola1997@gmail.com}{francescosannicola1997@gmail.com } |
+		PEC: \href{mailto:francesco.sannicola@pec.it}{francesco.sannicola@pec.it} \\
+		LinkedIn: \href{https://www.linkedin.com/in/francesco-sannicola}{francesco-sannicola} | 
+		GitHub: \href{https://github.com/francesco-s}{francesco-s} | 
+		Website: \href{https://francescosannicola.com}{\textbf{francescosannicola.com }}
+	\end{center}
+	
+	\vspace{6pt} % extra gap before the first section
+	
+	%==================
+	% Work Experience
+	%==================
+	\section*{Work Experience}
+	
+	{\small
+		\textbf{Data Scientist II} \hfill \href{https://www.agilelab.it/}{\textbf{\textcolor{black}{Agile Lab}}} — Sep 2025 -- Present
+		
+		\textbf{Machine Learning Engineer — Senior Consultant} \hfill \href{https://www.linksmt.it/}{\textbf{\textcolor{black}{Links M\&T}}} — Jan 2025 -- Aug 2025
+		\begin{itemize}
+			\item Built a multi-tenant IoT energy forecasting platform for 3 enterprise clients with genetic algorithm–optimized models, real-time dashboards, and \textbf{MLOps} (experiment tracking, model registry, versioned datasets, CI/CD, rollback); enabled per-tenant customization and reduced peak energy costs, overall consumption, and CO\textsubscript{2} emissions via demand forecasting.
+		\end{itemize}
+		
+		\textbf{Machine Learning Engineer — Consultant} \hfill \href{https://www.linksmt.it/}{\textbf{\textcolor{black}{Links M\&T}}} — Mar 2023 -- Dec 2024
+		\begin{itemize}
+			\item Integrated browsing, crawling, and \textbf{GraphRAG} into a ReAct agent–powered \textbf{chatbot} to unify on-premise and online sources, accelerating reporting and reducing preparation time by 15--30 minutes per session.
+			\item Designed an \textbf{ESG reporting} solution underpinned by RAG and GPT-4o for automated KPI extraction and contextual retrieval from fund reports, reducing compliance costs and improving decision-making efficiency.
+			\item Developed an NLP web application powered by \textbf{encoder-only} transformer models for contextual content recommendations with sub-5s latency, including speech-to-text and text-to-speech.
+			\item Engineered \textbf{predictive maintenance} and remaining useful life estimation for EV charging stations, reducing maintenance costs by 30\% and preventing unexpected failures via degradation models.
+			\item Built a loan \textbf{default prediction} model achieving 80\% accuracy with <2\% false positives, enabling proactive flagging of high-risk accounts 3--6 months before potential delays.
+			\item \textbf{Lecturer} in software development, databases, and Python at \href{https://www.associazioneformazione.it/formazione-professionale/ifts-tecnico-per-la-progettazione-e-lo-sviluppo-di-applicazioni-informatiche}{\textit{Associazione Formazione}}, and in anomaly detection and time series analysis at \href{https://academy.linksmt.it/corso-di-formazione-post-laurea-artificial-intelligence-machine-learning/}{\textit{Links Academy – AI \& ML}}, resulting in 7+ student job placements; practical lab materials available on \href{https://github.com/francesco-s/Links-Academy---Anomaly-Detection-Time-series-analysis}{\textit{GitHub}}.	
+		\end{itemize}
+		
+		\textbf{Artificial Intelligence and Data — Analyst} \hfill \href{https://www2.deloitte.com/}{\textbf{\textcolor{black}{Deloitte}}} — Oct 2022 -- Feb 2023
+		\begin{itemize}
+			\item Developed an \textbf{ETL} workflow with automated visualization of employee KPIs from survey data, transforming static reports into real-time dashboards that enhanced engagement, retention, and satisfaction monitoring for leadership decisions.
+		\end{itemize}
+		
+		\textbf{AI Engineer and System Administrator — Intern} \hfill \href{https://www.intesasanpaolo.com/}{\textbf{\textcolor{black}{Intesa Sanpaolo}}} — Dec 2021 -- May 2022
+		\begin{itemize}
+			\item Implemented real-time \textbf{time series forecasting} and anomaly detection, evolving from statistical baselines to recurrent networks and autoencoders, reducing infrastructure failure response time from minutes to seconds.
+		\end{itemize}
+	}
+	
+	%==========
+	% Education
+	%==========
+	\section*{Education}
+	{\small
+		\textbf{Master’s Degree in Computer Science — AI} \hfill \href{https://www.unito.it/}{\textbf{\textcolor{black}{University of Turin}}} — Jan 2020 -- Apr 2022 \hfill GPA: 3.71/4
+		\begin{itemize}
+			\item Thesis: real-time time series \textbf{anomaly detection} using stats, machine learning, and deep learning (\href{https://unitesi.unito.it/handle/20.500.14240/78909}{thesis link}).
+			\item Coursework: Neural Networks; Machine Learning; Natural Language Technologies; Advanced Software Architectures.
+			\item 200h collabs: web pages development for freshman orientation, notes making and study support for student with disability.
+		\end{itemize}
+		
+		\textbf{Bachelor’s Degree in Computer Science} \hfill \href{https://www.uniba.it/it}{\textbf{\textcolor{black}{University of Bari}}} — Oct 2016 -- Dec 2019 \hfill GPA: 4.00/4
+		\begin{itemize}
+			\item Coursework: Computer Architecture; Operating Systems; Algorithms; Databases; Software Engineering.
+			\item Thesis: full-stack development of an indoor positioning system integrating a content-based \textbf{recommender system}.
+		\end{itemize}
+	}
+	
+	%======
+	% Skills
+	%======
+	\section*{Skills}
+	{\small
+		\textbf{Programming:} Python, Java, SQL, Bash \\
+		\textbf{ML/AI:} TensorFlow, Keras, PyTorch, scikit-learn, RAG, ReAct agents, LangChain, LangGraph, Transformers \\
+		\textbf{Data \& Analytics:} Pandas, MS Excel, Qlik Sense, Qlik NPrinting \\
+		\textbf{Databases:} PostgreSQL, MongoDB, Redis, Milvus \\
+		\textbf{Cloud \& DevOps:} AWS (EC2, S3, Lambda, SageMaker, Transcribe, Polly, SQS, SNS, RDS, EventBridge), GCP, Docker, Kubernetes, Git, GitLab CI/CD \\
+		\textbf{Frameworks \& Tools:} FastAPI, Spring Boot, Flask, Bokeh, Keycloak
+	}
+	
+	%================
+	% Certifications
+	%================
+	\section*{Certifications}
+	{\small
+		\textbf{AWS Certified Machine Learning} \hfill Apr 2024 \\
+		Credentials: \href{https://www.credly.com/badges/ab41e8bd-32a3-49ce-a7a5-e3106f58beab/public_url}{Credly profile}
+		
+		\textit{Courses: }%
+		\href{https://certificates.cloudacademy.com/8997053f1d2091596d528402607d41ca312060fc.pdf}{AWS ML Certification Preparation (Mar 2024)}, %
+		\href{https://www.coursera.org/account/accomplishments/verify/KFC43YVQX5ZS}{GCP Big Data and ML Fundamentals (May 2022)}, %
+		\href{https://www.coursera.org/account/accomplishments/verify/GCCEPUHES7UC}{GCP Fundamentals: Core Infrastructure (Apr 2022)}
+	}
+	
+	%==========
+	% Languages
+	%==========
+	\section*{Languages}
+	Italian: Native \,|\, English: Professional Working Proficiency
+	
+\end{document}

@@ -28,21 +28,14 @@
 % Section titles: dark blue, no rule, increased spacing
 %                 \titlespacing*{\section}{left}{before-sep}{after-sep}
 \titleformat{\section}{\large\bfseries\color{darkblue}}{}{0pt}{}
-\titlespacing*{\section}{0pt}{10pt plus 2pt minus 1pt}{6pt plus 2pt minus 1pt}
-
-% (Optional) If you ever add \subsection, keep spacing consistent:
-% \titleformat{\subsection}{\normalsize\bfseries\color{darkblue}}{}{0pt}{}
-% \titlespacing*{\subsection}{0pt}{8pt plus 2pt minus 1pt}{4pt plus 1pt minus 1pt}
+\titlespacing*{\section}{0pt}{8pt plus 2pt minus 1pt}{6pt plus 2pt minus 1pt}
 
 % Compact paragraphs and lists
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setlist[itemize]{nosep, topsep=5pt, partopsep=0pt, parsep=0pt, leftmargin=*, labelsep=0.45em}
+\setlist[itemize]{nosep, topsep=3pt, partopsep=0pt, parsep=0pt, leftmargin=*, labelsep=0.45em}
 \linespread{1}
 \setlength{\emergencystretch}{2em}
-
-% Icon separator for contact line
-\newcommand{\iconsep}{\ {\color{darkblue}\faCircle}\ }
 
 \pagestyle{empty}
 
@@ -54,9 +47,9 @@
 	\begin{center}
 		{\Large \textbf{Francesco Sannicola} — Machine Learning Engineer \,|\, Data Scientist}\\
 		Email: \href{mailto:francescosannicola1997@gmail.com}{francescosannicola1997@gmail.com } |
-		PEC: \href{mailto:francesco.sannicola@pec.it}{francesco.sannicola@pec.it} \\
-		LinkedIn: \href{https://www.linkedin.com/in/francesco-sannicola}{francesco-sannicola} | 
-		GitHub: \href{https://github.com/francesco-s}{francesco-s} | 
+		PEC: \href{mailto:francesco.sannicola@pec.it}{francesco.sannicola@pec.it } \\
+		LinkedIn: \href{https://www.linkedin.com/in/francesco-sannicola}{francesco-sannicola } | 
+		GitHub: \href{https://github.com/francesco-s}{francesco-s } | 
 		Website: \href{https://francescosannicola.com}{\textbf{francescosannicola.com }}
 	\end{center}
 	
@@ -82,7 +75,7 @@
 			\item Developed an NLP web application powered by \textbf{encoder-only} transformer models for contextual content recommendations with sub-5s latency, including speech-to-text and text-to-speech.
 			\item Engineered \textbf{predictive maintenance} and remaining useful life estimation for EV charging stations, reducing maintenance costs by 30\% and preventing unexpected failures via degradation models.
 			\item Built a loan \textbf{default prediction} model achieving 80\% accuracy with <2\% false positives, enabling proactive flagging of high-risk accounts 3--6 months before potential delays.
-			\item \textbf{Lecturer} in software development, databases, and Python at \href{https://www.associazioneformazione.it/formazione-professionale/ifts-tecnico-per-la-progettazione-e-lo-sviluppo-di-applicazioni-informatiche}{\textit{Associazione Formazione}}, and in anomaly detection and time series analysis at \href{https://academy.linksmt.it/corso-di-formazione-post-laurea-artificial-intelligence-machine-learning/}{\textit{Links Academy – AI \& ML}}, resulting in 7+ student job placements; practical lab materials available on \href{https://github.com/francesco-s/Links-Academy---Anomaly-Detection-Time-series-analysis}{\textit{GitHub}}.	
+			\item \textbf{Lecturer} in software development, databases, and Python at \href{https://www.associazioneformazione.it/formazione-professionale/ifts-tecnico-per-la-progettazione-e-lo-sviluppo-di-applicazioni-informatiche}{\textit{Associazione Formazione}}, and in anomaly detection and time series analysis at \href{https://academy.linksmt.it/corso-di-formazione-post-laurea-artificial-intelligence-machine-learning/}{\textit{Links Academy – AI \& ML}}, resulting in 7+ student job placements; practical lab materials on \href{https://github.com/francesco-s/Links-Academy---Anomaly-Detection-Time-series-analysis}{\textit{GitHub}}.
 		\end{itemize}
 		
 		\textbf{Artificial Intelligence and Data — Analyst} \hfill \href{https://www2.deloitte.com/}{\textbf{\textcolor{black}{Deloitte}}} — Oct 2022 -- Feb 2023
@@ -101,16 +94,23 @@
 	%==========
 	\section*{Education}
 	{\small
-		\textbf{Master’s Degree in Computer Science — AI} \hfill \href{https://www.unito.it/}{\textbf{\textcolor{black}{University of Turin}}} — Jan 2020 -- Apr 2022 \hfill GPA: 3.71/4
+		
+		% Master’s: split into two rows with right-aligned university
+		\textbf{Master’s Degree in Computer Science — AI} \hfill Jan 2020 -- Apr 2022 \hspace{1em} GPA: 3.71/4 \\
+		\hfill \href{https://www.unito.it/}{\textbf{\textcolor{black}{University of Turin}}}
+		
 		\begin{itemize}
 			\item Thesis: real-time time series \textbf{anomaly detection} using stats, machine learning, and deep learning (\href{https://unitesi.unito.it/handle/20.500.14240/78909}{thesis link}).
-			\item Coursework: Neural Networks; Machine Learning; Natural Language Technologies; Advanced Software Architectures.
-			\item 200h collabs: web pages development for freshman orientation, notes making and study support for student with disability.
+			\item Coursework: Neural Networks; \textbf{Machine Learning}; Natural Language Technologies; Advanced Software Architectures.
+			\item 200h collabs: web pages development for freshman orientation; study support for a student with disability.
 		\end{itemize}
 		
-		\textbf{Bachelor’s Degree in Computer Science} \hfill \href{https://www.uniba.it/it}{\textbf{\textcolor{black}{University of Bari}}} — Oct 2016 -- Dec 2019 \hfill GPA: 4.00/4
+		% Bachelor’s: same two-row pattern so university aligns
+		\textbf{Bachelor’s Degree in Computer Science} \hfill Oct 2016 -- Dec 2019 \hspace{1em} GPA: 4/4 \\
+		\hfill \href{https://www.uniba.it/it}{\textbf{\textcolor{black}{University of Bari}}}
+		
 		\begin{itemize}
-			\item Coursework: Computer Architecture; Operating Systems; Algorithms; Databases; Software Engineering.
+			\item Coursework: Computer Architecture; Operating Systems; \textbf{Algorithms}; Databases; Software Engineering.
 			\item Thesis: full-stack development of an indoor positioning system integrating a content-based \textbf{recommender system}.
 		\end{itemize}
 	}

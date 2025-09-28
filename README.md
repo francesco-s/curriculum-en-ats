@@ -1,82 +1,40 @@
-# Francesco Sannicola Resume
+# ATS-Optimized LaTeX Resume Template
 
-This repository contains a LaTeX-based resume template built using the [moderncv](https://www.ctan.org/pkg/moderncv) class. The template is tailored for a professional resume/CV with custom modifications that enhance the layout, design, and functionality.
+This repository contains a one-page, ATS-friendly LaTeX resume template. It prioritizes clean, parsable content over complex visual design to ensure maximum compatibility with modern Applicant Tracking Systems (ATS).
 
-## Overview
+## Core Features
 
-The LaTeX source code in this repository:
+- **Simple, Single-Column Layout**: Built using LaTeX's standard `article` class with traditional sections (`Work Experience`, `Education`, `Skills`) to ensure ATS can correctly identify and categorize information.
+- **Clean Hyperlinks**: Uses the `hyperref` package to embed links directly into text (e.g., company names, email addresses) without disruptive colors or boxes, preventing common parsing failures.
+- **Standard Fonts**: Employs T1 encoding with Latin Modern fonts to guarantee high-quality PDF rendering and reliable text extraction by automated systems.
 
-- **Defines Custom Colors:** Utilizes a custom dark blue color (`darkblue`/`customcolor`) to achieve a consistent and professional look.
-- **Applies a Custom Layout:** Adopts the "classic" moderncv style with right-aligned details and incorporates header patches to adjust spacing and photo placement.
-- **Uses a Variety of Packages:** Incorporates packages such as `geometry`, `babel`, `lmodern`, `gensymb`, `footmisc`, `xpatch`, `tikz`, and `tcolorbox` for enhanced typography, layout control, and decorative elements.
-- **Redefines Key Commands:**
-  - The `\cventry` command is redefined to support a two-column layout with flexible spacing for work experiences.
-  - Custom commands like `\mycvitem` and `\cvtag` are provided to neatly display skills, technologies, and other bullet-point items in a visually appealing format.
-  - Additional commands (e.g., `\jobdouble`) have been introduced for structuring entries that require side-by-side information.
-- **Includes Detailed Personal Data:** The resume includes personal information such as name, professional title, contact details, social media links (LinkedIn and GitHub), and a placeholder for a profile photo.
-- **Showcases Professional Experience, Education, Certifications, and Languages**
+## Getting Started
 
-If you wish to use or customize this template, please review the prerequisites and instructions below.
+1.  Ensure you have a modern LaTeX distribution installed (e.g., TeX Live, MiKTeX).
+2.  Clone the repository and edit the `resume.tex` file with your information.
+3.  Compile the document twice using `pdflatex` to ensure all cross-references and spacing are correctly rendered.
 
-## Prerequisites
+<!-- end list -->
 
-Before compiling the resume, ensure you have the following installed:
+The output will be a single-page PDF named `resume.pdf`.
 
-- **TeX Distribution:** A modern TeX distribution (e.g., [TeX Live](https://www.tug.org/texlive/) or [MiKTeX](https://miktex.org/)).
-- **ModernCV Package:** The `moderncv` package, which is typically included in most distributions.
-- **Required Packages:** Verify that you have installed:
-  - `inputenc`
-  - `geometry`
-  - `babel`
-  - `lmodern`
-  - `gensymb`
-  - `footmisc`
-  - `xpatch`
-  - `tikz`
-  - `tcolorbox`
+## ATS-Compatibility Principles
 
-## Compilation
+This template was designed around principles known to improve parsing accuracy:
 
-To compile the resume, follow these steps:
-
-1. **Download the Repository:** Clone or download the repository to your local machine.
-2. **Compile with LaTeX:** Use your preferred LaTeX editor or compile via the command line. For example, run:
-   ```bash
-   pdflatex resume.tex
-   ```
-   It is recommended to run the command twice to ensure all references and layout adjustments are correctly updated.
+- **No Visual Clutter**: It deliberately avoids tables, multiple columns, text boxes, images, and other graphical elements that frequently confuse ATS parsers and can lead to dropped content.
+- **Consistent Formatting**: It uses unambiguous section headers and a consistent `Month YYYY – Month YYYY` date format to help systems accurately calculate work experience and filter candidates.
+- **Linear Structure**: The content flows logically from top to bottom, using standard `itemize` bullet points to prevent text fragmentation during automated processing.
 
 ## Customization
 
-You can easily modify several aspects of the template to fit your needs:
+- **Section Order**: While section titles should remain standard for parsability, you can reorder them (e.g., move `Skills` higher) to better align with the keywords in a specific job description.
+- **Spacing**: Adjust vertical spacing using the `titlesec` and `enumitem` package settings in the preamble to ensure the content fits perfectly on a single page without resorting to fragile formatting.
+- **Links**: Anchor hyperlinks to descriptive text (e.g., a company or university name). Only add a visible URL in parentheses if you know a specific application portal strips embedded link data.
 
-- **Personal Information:** Update your name, professional title, contact details, social media links, and the path to your profile photo.
-- **Content Sections:** Customize sections such as Working Experience, Education, Certifications, and Languages to better match your background.
-- **Design Elements:** Adjust colors, fonts, and overall layout by editing the color definitions and command redefinitions at the beginning of the document.
-- **Commands:**
-  - **`\cventry`:** Redesigned for a two-column format with adjustable spacing.
-  - **`\mycvitem`:** Used for adding bullet-point items with controlled spacing.
-  - **`\cvtag`:** Creates stylish tags for technologies and skills within decorative boxes.
-  - **`\jobdouble`:** Supports side-by-side job descriptions for a more compact presentation.
+## Human-Friendly vs. ATS-Friendly Versions
 
-## Directory Structure
+This template is engineered for passing through automated screening. For direct engagement with human recruiters, portfolios, or networking, a visually richer resume is often more effective.
 
-A suggested directory structure for the project might be:
-
-```
-.
-├── resume.tex         % Main LaTeX file
-├── README.md          % This file
-└── images/            % (Optional) Folder for images (e.g., profile photo)
-```
-
-## Contributing
-
-Contributions are welcome! If you have suggestions or improvements, please open an issue or submit a pull request.
-
-## Contact
-
-For any inquiries or feedback, please reach out via:
-
-- **Email:** [francescosannicola1997@gmail.com](mailto:francescosannicola1997@gmail.com)
-- **LinkedIn:** [francesco-sannicola](https://www.linkedin.com/in/francesco-sannicola)
+- **Paired Design**: A companion resume, built with the `moderncv` class for visual appeal, is available in the **[curriculum-en](https://github.com/francesco-s/curriculum-en)** repository.
+- **Content Sync**: It is critical to keep the content of both the ATS-optimized and the human-readable versions synchronized to avoid presenting conflicting information.
